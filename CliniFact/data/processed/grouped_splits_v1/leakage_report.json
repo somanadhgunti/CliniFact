@@ -1,0 +1,44 @@
+{
+  "policy": "Connected components over exact non-empty nctId, PMID, and claim identifiers. Every component is assigned to one split.",
+  "source_records": 1970,
+  "components": 974,
+  "largest_component_records": 61,
+  "identifier_quality": {
+    "missing": {
+      "nctId": 0,
+      "PMID": 0,
+      "claim": 0
+    },
+    "invalid": {
+      "nctId": 0,
+      "PMID": 0,
+      "claim": 0
+    }
+  },
+  "source_exact_duplicate_rows": 0,
+  "conflicts": {
+    "conflicting_claims": 64,
+    "conflicting_rows": 164,
+    "conflicting_components": 106
+  },
+  "cross_split_overlap": {
+    "nctId": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "PMID": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "claim": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    }
+  },
+  "all_nctId_isolated": true,
+  "all_PMID_isolated": true,
+  "all_claim_isolated": true
+}

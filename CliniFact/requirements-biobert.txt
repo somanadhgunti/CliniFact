@@ -1,0 +1,11 @@
+# Direct runtime dependencies for experiments/biobert_baseline.py.
+# PyTorch installation is intentionally unpinned: choose the CPU or CUDA build
+# appropriate for the target machine using the official PyTorch instructions.
+torch
+transformers>=4.40,<5
+numpy>=1.24,<3
+pandas>=2.0,<3
+scikit-learn>=1.3,<2
+
+# Lightweight configuration tests.
+pytest>=8,<9

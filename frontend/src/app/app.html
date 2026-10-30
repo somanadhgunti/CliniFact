@@ -1,0 +1,42 @@
+<header class="site-header">
+  <a class="brand" routerLink="/" aria-label="CliniFact home">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" role="presentation">
+        <path d="M16 3 26 7v7c0 7.1-4.3 12.2-10 15C10.3 26.2 6 21.1 6 14V7l10-4Z" />
+        <path d="m11 16 3.2 3.2L21.5 12" />
+      </svg>
+    </span>
+    <span><strong>CliniFact</strong><small>Clinical evidence verification</small></span>
+  </a>
+  <button class="menu-toggle" type="button" aria-controls="primary-navigation"
+    [attr.aria-expanded]="menuOpen()" aria-label="Toggle navigation menu" (click)="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="primary-navigation" aria-label="Primary navigation" [class.is-open]="menuOpen()">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
+    <a routerLink="/" fragment="how-it-works" (click)="closeMenu()">How It Works</a>
+    <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
+    <a class="nav-cta" routerLink="/verification" (click)="closeMenu()">Verify a Claim <span aria-hidden="true">→</span></a>
+  </nav>
+</header>
+<main class="page-shell"><router-outlet /></main>
+<footer class="site-footer">
+  <div class="footer-brand">
+    <a class="brand" routerLink="/" (click)="closeMenu()">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" role="presentation"><path d="M16 3 26 7v7c0 7.1-4.3 12.2-10 15C10.3 26.2 6 21.1 6 14V7l10-4Z" /><path d="m11 16 3.2 3.2L21.5 12" /></svg>
+      </span>
+      <span><strong>CliniFact</strong><small>Clinical evidence verification</small></span>
+    </a>
+    <p>Research-oriented tools for connecting clinical claims with biomedical evidence.</p>
+  </div>
+  <div class="footer-links">
+    <a routerLink="/">Home</a>
+    <a routerLink="/verification">Verification</a>
+    <a routerLink="/about">About</a>
+  </div>
+  <div class="footer-note">
+    <p>Experimental research prototype. Not for medical advice or clinical decision-making.</p>
+    <span>© {{ currentYear }} CliniFact</span>
+  </div>
+</footer>

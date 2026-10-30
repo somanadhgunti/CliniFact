@@ -1,0 +1,30 @@
+:root {
+  --color-navy: #102a43;
+  --color-blue: #1d5d9b;
+  --color-teal: #167d85;
+  --color-ink: #18324a;
+  --color-muted: #60758a;
+  --color-surface: #fff;
+  --color-page: #f5f8fb;
+  --color-border: #dce5ed;
+  --color-white: #fff;
+  --color-blue-soft: #e8f2fb;
+  --font-display: 'Segoe UI', sans-serif;
+  --page-gutter: clamp(1.25rem, 5vw, 5rem);
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --radius-md: .75rem;
+  --radius-lg: 1.25rem;
+  --shadow-card: 0 .75rem 2rem rgb(16 42 67 / 8%);
+}
+* { box-sizing: border-box; }
+html { background: var(--color-page); color: var(--color-ink); font-family: 'Segoe UI', sans-serif; }
+body { margin: 0; min-width: 320px; }
+button, input, textarea { font: inherit; }
+a { transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

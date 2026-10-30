@@ -1,0 +1,30 @@
+{
+  "model_name": "dmis-lab/biobert-base-cased-v1.1",
+  "model_revision": "924f12e0c3db7f156a765ad53fb6b11e7afedbc8",
+  "seeds": [
+    13
+  ],
+  "epochs": 1,
+  "patience": 1,
+  "train_batch_size": 1,
+  "micro_batch_size": 1,
+  "gradient_accumulation_steps": 1,
+  "cpu_threads": 4,
+  "eval_batch_size": 4,
+  "learning_rate": 2e-05,
+  "sequence_length": 512,
+  "data_dir": "C:\\Users\\Somu\\Desktop\\4.2 project stuff\\CliniFact\\data\\processed\\grouped_splits_v1",
+  "rows": {
+    "train": 1260,
+    "validation": 316,
+    "test": 394
+  },
+  "label_mapping": {
+    "0": "inconclusive",
+    "1": "evidence",
+    "2": "NEI"
+  },
+  "seed_policy": "Python, NumPy, PyTorch, and DataLoader generator seeded per run",
+  "checkpoint_selection": "highest validation macro-F1",
+  "effective_batch_size": "micro_batch_size multiplied by gradient_accumulation_steps"
+}

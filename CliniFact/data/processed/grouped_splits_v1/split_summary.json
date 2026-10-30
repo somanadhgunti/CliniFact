@@ -1,0 +1,137 @@
+{
+  "random_seed": 20261025,
+  "source_files": [
+    "data\\processed\\primary_outcome_publication_dataset\\test_set.csv",
+    "data\\processed\\primary_outcome_publication_dataset\\train_set.csv",
+    "data\\processed\\primary_outcome_publication_dataset\\validation_set.csv"
+  ],
+  "source_columns": [
+    "index",
+    "nctId",
+    "claim",
+    "PMID",
+    "article_title",
+    "article_abstract",
+    "label",
+    "outcome_type",
+    "outcome_title",
+    "outcome_description",
+    "intervention_group_title",
+    "comparator_group_title",
+    "intervention_group_description",
+    "comparator_group_description",
+    "intervention_group_intervention_label",
+    "comparator_group_intervention_label",
+    "intervention_group_arm_group_type",
+    "comparator_group_arm_group_type",
+    "pValues",
+    "statisticalMethods",
+    "nonInferiorityTypes",
+    "Publication Date"
+  ],
+  "grouping_policy": "Connected components over exact non-empty nctId, PMID, and claim identifiers. Every component is assigned to one split.",
+  "target_proportions": {
+    "train": 0.64,
+    "validation": 0.16,
+    "test": 0.2
+  },
+  "split_details": {
+    "train": {
+      "records": 1260,
+      "proportion": 0.6395939086294417,
+      "label_counts": {
+        "0": 259,
+        "1": 333,
+        "2": 668
+      },
+      "label_proportions": {
+        "0": 0.20555555555555555,
+        "1": 0.2642857142857143,
+        "2": 0.5301587301587302
+      },
+      "unique_nctId": 651,
+      "unique_PMID": 999,
+      "unique_claim": 919
+    },
+    "validation": {
+      "records": 316,
+      "proportion": 0.16040609137055836,
+      "label_counts": {
+        "0": 51,
+        "1": 88,
+        "2": 177
+      },
+      "label_proportions": {
+        "0": 0.16139240506329114,
+        "1": 0.27848101265822783,
+        "2": 0.560126582278481
+      },
+      "unique_nctId": 152,
+      "unique_PMID": 250,
+      "unique_claim": 223
+    },
+    "test": {
+      "records": 394,
+      "proportion": 0.2,
+      "label_counts": {
+        "0": 73,
+        "1": 141,
+        "2": 180
+      },
+      "label_proportions": {
+        "0": 0.18527918781725888,
+        "1": 0.35786802030456855,
+        "2": 0.45685279187817257
+      },
+      "unique_nctId": 189,
+      "unique_PMID": 291,
+      "unique_claim": 299
+    }
+  },
+  "source_records": 1970,
+  "output_records": 1970,
+  "records_excluded": 0,
+  "components": 974,
+  "identifier_quality": {
+    "missing": {
+      "nctId": 0,
+      "PMID": 0,
+      "claim": 0
+    },
+    "invalid": {
+      "nctId": 0,
+      "PMID": 0,
+      "claim": 0
+    }
+  },
+  "conflicts": {
+    "conflicting_claims": 64,
+    "conflicting_rows": 164,
+    "conflicting_components": 106
+  },
+  "cross_split_overlap": {
+    "nctId": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "PMID": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "claim": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    }
+  },
+  "validation": {
+    "all_source_records_accounted_for": true,
+    "schemas_match_source": true,
+    "no_output_exact_duplicates": true,
+    "nctId_isolated": true,
+    "PMID_isolated": true,
+    "claim_isolated": true
+  }
+}

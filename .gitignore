@@ -1,0 +1,44 @@
+@'
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Node / Angular
+node_modules/
+dist/
+.angular/
+coverage/
+
+# IDE
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Model weights - keep locally or use Git LFS
+*.safetensors
+pytorch_model.bin
+pytorch_model*.bin
+'@ | Set-Content .gitignore
+# Unrelated files
+zeroth review/

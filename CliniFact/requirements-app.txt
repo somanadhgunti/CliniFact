@@ -1,0 +1,5 @@
+# Backend foundation dependencies. Research/ML dependencies remain in
+# requirements-biobert.txt.
+fastapi>=0.110,<1
+uvicorn[standard]>=0.29,<1
+httpx>=0.27,<1

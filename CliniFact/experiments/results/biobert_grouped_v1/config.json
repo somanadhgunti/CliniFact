@@ -1,0 +1,37 @@
+{
+  "experiment_name": "biobert_grouped_v1",
+  "model_name": "dmis-lab/biobert-base-cased-v1.1",
+  "model_revision": "924f12e0c3db7f156a765ad53fb6b11e7afedbc8",
+  "data_dir": "data/processed/grouped_splits_v1",
+  "label_conflicts_file": "data/processed/grouped_splits_v1/label_conflicts.csv",
+  "output_dir": "experiments/results/biobert_grouped_v1",
+  "seeds": [
+    13,
+    37,
+    42
+  ],
+  "epochs": 100,
+  "patience": 10,
+  "train_batch_size": 32,
+  "micro_batch_size": 8,
+  "gradient_accumulation_steps": 4,
+  "cpu_threads": 4,
+  "eval_batch_size": 128,
+  "learning_rate": 2e-05,
+  "sequence_length": 512,
+  "num_labels": 3,
+  "label_mapping": {
+    "0": "inconclusive",
+    "1": "evidence",
+    "2": "NEI"
+  },
+  "checkpoint_selection": "highest validation macro-F1",
+  "test_usage": "held-out evaluation only after checkpoint selection",
+  "rows": {
+    "train": 1260,
+    "validation": 316,
+    "test": 394
+  },
+  "training_status": "not_started",
+  "configuration_precedence": "JSON configuration is authoritative by default; explicitly supplied CLI options override matching fields."
+}
